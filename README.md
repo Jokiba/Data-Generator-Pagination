@@ -7,6 +7,7 @@ Rešio sam problem datuma rođenja, sada mogu da se upišu osobe rođene pre 197
 
 ## Paginacija podataka
 Prolaz kroz podatke pomoću tabelarnog prikaza i njegovih opcija.
+Tabela vlasnik je organizovana po datumu isteka registracije vozila od najmanjeg do najvećeg datuma.
 Dodata opcija Details za prikaz informacija o vozilu.
 
 ## Potrebno za pokretanje skripte

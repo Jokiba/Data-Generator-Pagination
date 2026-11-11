@@ -28,7 +28,7 @@ db_password = input("Enter password (blank if not entered): ").strip()
 # database name
 db_name = input("Enter database name (db_vozila): ").strip()
 
-# connection testing
+# credential for database connection
 db_credential = {
     "host": db_host if len(db_host) > 0 else "127.0.0.1",
     "port": int(db_port) if len(db_port) > 0 else 3306,
@@ -37,6 +37,7 @@ db_credential = {
     "database": db_name if len(db_name) > 0 else "db_vozila"
 }
 
+# connection testing
 try:
     # connect_timeout=5 parametar za connect
     connection = pymysql.connect(**db_credential)
@@ -50,27 +51,27 @@ print("----- Press 'Enter' for default value in parentheses.")
 num_records = input("Number of records for entry(50): ").strip()
 table_name = input("Enter the table name(vlasnik_vozila): ").strip()
 print("----- Press 'Enter' for a non-table column.")
-kol_vlasnik_ime = input("Enter a column name for the owner name: ").strip()
-kol_vlasnik_prezime = input("Enter a column name for the owner's last name: ").strip()
-kol_adresa = input("Enter the owner's address: ").strip()
-kol_mesto = input("Enter the owner's location place: ").strip()
+col_first_name = input("Enter a column name for the owner first name: ").strip()
+col_last_name = input("Enter a column name for the owner's last name: ").strip()
+col_address = input("Enter the owner's address: ").strip()
+col_place = input("Enter the owner's location place: ").strip()
 
 # Query fields with column names and benchmark data will be placed here
 query_fields_owner = {}
 
-query_fields_owner['kol_vlasnik_ime'] = {'use': True if len(kol_vlasnik_ime) > 0 else False,
-                                  'name': kol_vlasnik_ime}
-query_fields_owner['kol_vlasnik_prezime'] = {'use': True if len(kol_vlasnik_prezime) > 0 else False,
-                                  'name': kol_vlasnik_prezime}
-query_fields_owner['kol_adresa'] = {'use': True if len(kol_adresa) > 0 else False,
-                                  'name': kol_adresa}
-query_fields_owner['kol_mesto'] = {'use': True if len(kol_mesto) > 0 else False,
-                                  'name': kol_mesto}
+query_fields_owner['col_first_name'] = {'use': True if len(col_first_name) > 0 else False,
+                                  'name': col_first_name}
+query_fields_owner['col_last_name'] = {'use': True if len(col_last_name) > 0 else False,
+                                  'name': col_last_name}
+query_fields_owner['col_address'] = {'use': True if len(col_address) > 0 else False,
+                                  'name': col_address}
+query_fields_owner['col_place'] = {'use': True if len(col_place) > 0 else False,
+                                  'name': col_place}
 
 # default values for table name and number of records
 if len(table_name) == 0:
     table_name = "vlasnik_vozila"
-num_records = int(num_records) if len(num_records) > 0 else 50;
+num_records_owner = int(num_records) if len(num_records) > 0 else 50;
 
 # keys and column names
 sql_keys = []
@@ -92,17 +93,17 @@ generisanje_dozvola = input("Nastavi sa generisanjem podataka? (Y/N)").strip().l
 
 if generisanje_dozvola == "y":
     podaci_vlasnik = []
-    for _ in range(br_zapisa_vlasnik):
+    for _ in range(num_records_owner):
         red = {}
         for kljuc in sql_kljucevi:
-            if kljuc == 'kol_vlasnik_ime':
-                red['kol_vlasnik_ime'] = random.choice(vlasnik_ime)
-            elif kljuc == 'kol_vlasnik_prezime':
-                red['kol_vlasnik_prezime'] = random.choice(vlasnik_prezime)
-            elif kljuc == 'kol_adresa':
-                red['kol_adresa'] = random.choice(adrese)
-            elif kljuc == 'kol_mesto':
-                red['kol_mesto'] = random.choice(sm_mesta)
+            if kljuc == 'col_first_name':
+                red['col_first_name'] = random.choice(first_name)
+            elif kljuc == 'col_last_name':
+                red['col_last_name'] = random.choice(last_name)
+            elif kljuc == 'col_address':
+                red['col_address'] = random.choice(address)
+            elif kljuc == 'col_place':
+                red['col_place'] = random.choice(place)
         podaci_vlasnik.append(red)
 
     # konekcija i ubacivanje podataka u bazu

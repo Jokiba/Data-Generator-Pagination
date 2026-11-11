@@ -8,7 +8,7 @@ address = ["Mileve Marić 11","Masarikova 15","Matije Gubca 4a","Milentija Popov
 mark = ["Alpina","Alfa Romeo","Aston Martin","Audi","Bentley","BMW","Bugatti","Buick","Cadillac","Chevrolet","Chrysler","Citroën","Daewoo","Dodge","Eagle","Ferrari","Fiat","Ford","Geo","GMC","Honda","Hummer","Hyundai","Infiniti","Isuzu","Jaguar","Jeep","Kia","Lada","Lamborghini","Land Rover","Lexus","Lincoln","Lotus","Maserati","Maybach","McLaren","Mazda","Mercedes-Benz","Mercury","MINI","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Plymouth","Pontiac","Porsche","Renault","Rolls-Royce","Rover","Saab","Saturn","Scion","Seat","Smart","Spyker","Subaru","Suzuki","Škoda","Tesla","Trabant","Toyota","Volkswagen","Volvo","Wartburg","Zastava"]
 model = ["1 Series","100","1500","164","2500","3 Series","300","300M","300TE","300ZX","3500 Club Coupe","4000","4Runner","57","6 Series","6000","612 Scaglietti","626","7 Series","9-3","90","900","9000","911","960","A3","A4","Accent","Accord","Alcyone SVX","Alero","Alliance","Altima","Amanti","Amigo","Ascender","Astra","Aurora","Avenger","Azure","B-Series","B-Series Plus","Bel Air","Beretta","Biturbo","Blazer","Bonneville","Boxster","Bravada","Bronco","C-Class","Caliber","Camaro","Camry Hybrid","Caravan","Cayenne","Celica","Century","Challenger","Civic","Civic GX","CL-Class","Coachbuilder","Colorado","Commander","Compass","Continental","Continental Flying Spur","Continental GTC","Cooper","Cooper Clubman","Corsica","Corvette","Cougar","Coupe","Coupe GT","Coupe Quattro","Crown Victoria","CTS","Cutlass Supreme","CX-5","CX-9","D150 Club","Dakota","Dakota Club","Defender","Diablo","Discovery Series II","E-350 Super Duty","E-Class","E-Series","E150","E250","Econoline E150","Econoline E250","Econoline E350","Elantra","Eldorado","Electra","Element","Envoy","Equinox","Equus","ES","Escalade","Escalade EXT","Escape","Escort","Esteem","Excel","Exige","Expedition EL","Explorer Sport","Explorer Sport Trac","Express 1500","Express 2500","Express 3500","F-Series","F150","F250","F350","F450","Firebird","Florida","Focus","Forenza","FR-S","Freelander","Freestar","Frontier","G-Class","G-Series 1500","G35","Galant","Grand Cherokee","Grand Prix","Grand Vitara","GS","GT","GT500","GTI","GTO","H3","HHR","Highlander Hybrid","I","i-370","Impala SS","Impreza","Impreza WRX","Intrepid","Ion","Ipsum","IS","IS-F","J","Jetta","Journey","Justy","JX","Kizashi","Koral","LaCrosse","Lancer","Lancer Evolution","Land Cruiser","Landaulet","Laser","Legacy","LeMans","LeSabre","LS","Lumina","Lumina APV","Malibu","Mariner","Matrix","Mazda3","Mazda6","Mazdaspeed 3","Miata MX-5","Mighty Max","Millenia","Mini Cooper S","Mirage","MKS","MKT","MKZ","Montana","Monte Carlo","Montego","Montero Sport","Monza","Mountaineer","Murciélago LP640","Mustang","MX-5","MX-6","Mystique","Navigator","Navigator L","Neon","New Beetle","NSX","NV2500","Odyssey","Outback","Outlander","Pacifica","Pajero","Panamera","Paseo","Passat","Phantom","Pilot","Prelude","Prius","Prizm","Probe","Protege","PT Cruiser","Q","Rabbit","Rainier","Rally Wagon G3500","Ram 1500 Club","Ram 2500","Ram 3500","Ram 3500 Club","Ram Van 3500","Ram Van B250","Ram Wagon B250","Range Rover","Ranger","RAV4","RDX","Regal","Rendezvous","Rio","Riviera","RL","Rocky","Rodeo","Rogue","RS6","RX","RX-7","S-Class","S-Series","S10","S2000","S4","S40","S5","S60","S8","Sable","Safari","Santa Fe","Savana 1500","Savana 2500","Savana 3500","Sebring","Sentra","Sephia","Sequoia","Sienna","Sierra","Sierra 1500","Sierra 2500","Sierra 3500","Silhouette","Silverado","Silverado 2500","Skala 55","Solara","Sonata","Sorento","Spectra","Sportage","Sportvan G10","Sprinter","Starion","Stealth","Suburban","Suburban 1500","Suburban 2500","Summit","Supra","Swift","SX4","Tacoma","Tahoe","Talon","Taurus","Thunderbird","TL","Touareg","Town & Country","Town Car","Tracer","TrailBlazer","Transit Connect","Trooper","Truck","TSX","Tundra","Type 2","Uplander","V70","V90","Vandura 2500","Vandura 3500","Vandura G3500","Vantage","Venture","Vibe","Viper","Virage","Voyager","W123","W201","Wrangler","X-Type","X5","X5 M","X6 M","xA","XC60","XC70","xD","XF","XG350","XJ Series","XK","XT","Xterra","Xtra","Yaris","Yugo 45","Yugo 55","Yugo Cabrio","Yukon","Yukon XL 1500","Yukon XL 2500"]
 year = [2005,1985,2006,2004,1994,2010,2002,2004,1993,1997,2010,2005,2004,2005,1990,1994,2009,2004,1999,2000,1998,1992,1993,2004,1994,2003,1997,1998,2009,1990,1994,2009,2013,1997,1995,2007,1995,2005,2004,2012,2006,1995,2008,1995,1998,2000,2002,1998,1985,1986,2011,2005,1994,1998,2004,2001,1992,2013,2004,1993,1994,2001,2011,2012,2010,1997,2003,1998,2011,1984,1997,2009,2011,2008,1993,2007,1992,2000,2010,2013,2005,2002,2008,2004,1992,2010,2011,2010,2005,2007,2001,1992,2007,1992,2008,1989,1988,1993,1992,2006,1994,2001,2004,2005,2005,1990,1993,2010,2001,1998,2012,2000,1997,2004,2011,2003,2006,2002,2008,1998,1986,1993,2010,1993,2012,2001,1997,2007,2008,1992,2004,2010,1997,1997,2009,2003,2002,1990,2002,2009,2010,2009,2009,2010,2011,2011,1997,2004,2012,1985,1994,1992,2006,2011,2001,1987,2001,2005,2003,2003,2011,1999,2007,2007,2005,1995,2000,1992,2006,1997,2010,2012,2012,2001,2007,1992,1998,1999,1999,1992,1968,1993,2005,2009,2010,1987,1995,2011,1996,1996,1996,1998,2010,2008,2010,2006,2006,1990,2000,2006,1997,1996,1997,2000,2004,2012,2009,2009,1999,2005,1996,2004,1995,2003,1987,1996,1995,2000,2005,2006,1990,2009,2005,1988,1992,1998,1999,1960,1988,1996,1998,2001,2005,2013,2012,1997,2003,1994,2005,2006,1987,2004,2001,2002,2003,2010,2010,2004,1999,1995,1993,2012,1966,1969,1987,2009,2012,1997,2009,1993,1993,2011,2012,2011,2008,2002,1999,1988,2007,1999,1996,2006,2008,2009,1993,1990,1994,1995,2003,2002,1997,1996,2004,2012,1991,2001,2009,2002,1991,1990,2006,1997,1999,1995,2011,2011,2010,2003,2010,1993,1986,1988,2007,2007,1994,2011,1985,2001,2006,2009,2006,2012,2008,1993,2002,2010,2000,2002,1998,1997,2002,2006,2003,1996,2004,2008,1994,2010,1987,2000,1985,2008,2002,2001,1996,2007,2003,2006,2012,1985,2001,1988,2012,1997,2011,2002,1985,2009,2011,1962,1992,2009,1997,1987,1994,2005,2000,1998,2004,2009,2007,1993,1993,2001,1994,2009,2011,1988,2001,2003,2012,2011,2013,2011,1994,2012,1992,2012,1999,2003,2010,1996,1987,2012,1990,2006,1993,2011,1998,2008,2009,2002,1999,2001,2001,2005,2000,2005,2005,1985,2010,2011,2004,2010,1985,2003,2011,2004,2002,2006,1998,2011,2012,2006,1990,2005,2002,1998,2011,2010,1989,2001,2004,2009,2001,2012,2007,1996,1997,2005,2006,1968,2010,2011,1993,1999,2009,2004,2004,2009,2002,1992,2007,2003,2013,1984,1991,1992,2004,2005,2003,2004,1984,2003,2007,2008,2007,2010,2006,2011,2012,2002,1995,1996,1994,1999,2003,1994,1992,1994,2001,1999,1992,1993,2000,1973,1992,1986,2006,1997,1995,1997,2004,2008,2001,2011,1999,1988,2012,2009,1996,2011,2008,1994,1999,2002,1961,1997,1997,1962]
-letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 # requried library
 import random
@@ -23,7 +23,7 @@ print("Leave fields blank for default values in brackets or enter your server da
 db_host = input("Enter host name (127.0.0.1): ").strip()
 db_port = input("Enter port number (3306): ").strip()
 db_user = input("Enter user name (root): ").strip()
-db_password = input("Enter password (blank if not entered): ").strip()
+db_password = input("Enter password (leave blank if there isn't one): ").strip()
 
 # database name
 db_name = input("Enter database name (db_vozila): ").strip()
@@ -48,11 +48,12 @@ except pymysql.MySQLError as ex:
 
 # here we insert the number of records and column names for database table of owners
 print("----- Press 'Enter' for default value in parentheses.")
-num_records = input("Number of records for entry(50): ").strip()
+num_records_owner = input("Number of records for entry(50): ").strip()
 table_name = input("Enter the table name(vlasnik_vozila): ").strip()
 print("----- Press 'Enter' for a non-table column.")
-col_first_name = input("Enter a column name for the owner first name: ").strip()
-col_last_name = input("Enter a column name for the owner's last name: ").strip()
+# col_first_name and col_last_name is mandatory columns
+col_first_name = input("Enter a column name for the owner first name(required column): ").strip()
+col_last_name = input("Enter a column name for the owner's last name(required column): ").strip()
 col_address = input("Enter the owner's address: ").strip()
 col_place = input("Enter the owner's location place: ").strip()
 
@@ -71,7 +72,7 @@ query_fields_owner['col_place'] = {'use': True if len(col_place) > 0 else False,
 # default values for table name and number of records
 if len(table_name) == 0:
     table_name = "vlasnik_vozila"
-num_records_owner = int(num_records) if len(num_records) > 0 else 50;
+num_records_owner = int(num_records_owner) if len(num_records_owner) > 0 else 50;
 
 # keys and column names
 sql_keys = []
@@ -86,63 +87,65 @@ col_fields_str = ",".join(col_names)  # column names
 sql_keys_str = ",".join( [f"%({key})s" for key in sql_keys] ) # values
 
 # SQL query with variables 
-sql_upit1 = f"INSERT INTO {table_name} ({col_fields_str}) VALUES({sql_keys_str});"
+sql_query1 = f"INSERT INTO {table_name} ({col_fields_str}) VALUES({sql_keys_str});"
 
 # data generation
-generisanje_dozvola = input("Nastavi sa generisanjem podataka? (Y/N)").strip().lower()
+generate_permission = input("Continue with generate data? (Y/N)").strip().lower()
 
-if generisanje_dozvola == "y":
-    podaci_vlasnik = []
+# data object creation
+if generate_permission == "y":
+    owners_data = []
     for _ in range(num_records_owner):
-        red = {}
-        for kljuc in sql_kljucevi:
-            if kljuc == 'col_first_name':
-                red['col_first_name'] = random.choice(first_name)
-            elif kljuc == 'col_last_name':
-                red['col_last_name'] = random.choice(last_name)
-            elif kljuc == 'col_address':
-                red['col_address'] = random.choice(address)
-            elif kljuc == 'col_place':
-                red['col_place'] = random.choice(place)
-        podaci_vlasnik.append(red)
+        row = {}
+        for key in sql_keys:
+            if key == 'col_first_name':
+                row['col_first_name'] = random.choice(first_name)
+            elif key == 'col_last_name':
+                row['col_last_name'] = random.choice(last_name)
+            elif key == 'col_address':
+                row['col_address'] = random.choice(address)
+            elif key == 'col_place':
+                row['col_place'] = random.choice(place)
+        owners_data.append(row)
 
-    # konekcija i ubacivanje podataka u bazu
+    # connection and data entry into the database
     try:
         connection = pymysql.connect(**db_credential, cursorclass= pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
-            result = cursor.executemany(sql_upit1, podaci_vlasnik)
+            result = cursor.executemany(sql_query1, owners_data)
             connection.commit()
             if result:
-                print("Uspešno unetih redova:", result)
+                # number of data rows
+                print("Successfully inserted rows:", result)
             else:
-                print("Greška pri unosu redova.")
+                print("Error during row entry.")
             time.sleep(3)
-            # ovo da ubacim u funkciju
+            # last owner id
             cursor.execute("""SELECT vlasnik_id FROM vlasnik_vozila
                               ORDER BY vlasnik_id DESC LIMIT 1;""")
             result3 = cursor.fetchone()
-            zadnji_vlasnik_id = result3['vlasnik_id']
-            if zadnji_vlasnik_id:
-                print("Zadnji vlasnik id:", zadnji_vlasnik_id)
+            last_owner_id = result3['vlasnik_id']
+            if last_owner_id:
+                print("Last owner id:", last_owner_id)
             else:
-                print("Greška kod upita za zadnji id.")
+                print("Error querying last id.")
             time.sleep(3)
-
+            # Total number of license plates and list of registration number for vehicles
             cursor.execute("SELECT reg_oznaka FROM vozila;")
             result4 = cursor.fetchall()
-            reg_oznaka_baza = []
-            for oznaka in result4:
-                if oznaka['reg_oznaka'] is not None:
-                    reg_oznaka_baza.append(oznaka['reg_oznaka'])
-            if reg_oznaka_baza:
-                print("Ukupan broj registarskih oznaka:", len(reg_oznaka_baza))
+            registration_number_database = []
+            for reg_number in result4:
+                if reg_number['reg_oznaka'] is not None:
+                    registration_number_database.append(reg_number['reg_oznaka'])
+            if registration_number_database:
+                print("Total number of license plates:", len(registration_number_database))
             else:
-                print("Greška kod upita za registarske oznake")
+                print("Error querying license plates.")
             cursor.close()
     except pymysql.MySQLError as ex:
-        print("Greška pri unosu redova!", ex)
+        print("Error while entering rows!", ex)
     
-    # ako postoje podaci o vlasniku upisujemo vozilo u drugu tabelu
+    # ako postoje podaci o vlasnicima upisujemo vozila u drugu tabelu
     if len(podaci_vlasnik) > 0:
         br_zapisa_vozilo = br_zapisa_vlasnik
         tabela_ime = input("Unesite naziv druge tabele(vozila): ").strip()

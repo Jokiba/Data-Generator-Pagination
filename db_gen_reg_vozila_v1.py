@@ -145,69 +145,68 @@ if generate_permission == "y":
     except pymysql.MySQLError as ex:
         print("Error while entering rows!", ex)
     
-    # ako postoje podaci o vlasnicima upisujemo vozila u drugu tabelu
-    if len(podaci_vlasnik) > 0:
-        br_zapisa_vozilo = br_zapisa_vlasnik
-        tabela_ime = input("Unesite naziv druge tabele(vozila): ").strip()
-        print("----- Pritisnite 'Enter' za kolonu koja nije u tabeli.")
-        print("Podrazumevane vrednosti su u zagradama.")
-        kol_marka = input("Unesite naziv kolone za marku vozila(marka): ").strip()
-        kol_model = input("Unesite naziv kolone za model vozila(model): ").strip()
-        kol_godiste = input("Unesite naziv kolone za godište vozila(godiste): ").strip()
-        kol_motor_kw = input("Unesite naziv kolone za snagu motora(motor_kw): ").strip()
-        kol_datum_reg = input("Unesite naziv kolone za datum registracije: ").strip()
-        kol_reg_oznaka = input("Unesite naziv kolone za registarsku oznaku: ").strip()
-        kol_vlasnik_id = input("Unesite naziv kolone stranog ključa(vlasnik_id): ").strip()
+    # if there is information about the owners, we enter the vehicles in another table
+    if len(owners_data) > 0:
+        num_records_vehicle = num_records_owner
+        table_name2 = input("Enter the name of the second table(vozila): ").strip()
+        print("----- Press 'Enter' for a non-table column.")
+        print("Default values ​​are in parentheses.")
+        col_maker = input("Enter the column name for the vehicle maker(marka) required column: ").strip()
+        col_model = input("Enter the column name for vehicle model(model) required column: ").strip()
+        col_year = input("Enter the column name for vehicle year(godiste) required column: ").strip()
+        col_engine_kw = input("Enter the column name for engine power(motor_kw) required column: ").strip()
+        col_reg_date = input("Enter the column name for registration date: ").strip()
+        col_plt_number = input("Enter the column name for license plate number: ").strip()
+        col_owner_id = input("Enter the column name of the foreign key(vlasnik_id) required column: ").strip()
 
-        # default vrednosti
-        if len(tabela_ime) == 0:
-            tabela_ime = "vozila"
-        if len(kol_marka) == 0:
-            kol_marka = "marka"
-        if len(kol_model) == 0:
-            kol_model = "model"
-        if len(kol_godiste) == 0:
-            kol_godiste = "godiste"
-        if len(kol_motor_kw) == 0:
-            kol_motor_kw = "motor_kw"
-        if len(kol_vlasnik_id) == 0:
-            kol_vlasnik_id = "vlasnik_id"
+        # default values
+        if len(table_name2) == 0:
+            table_name2 = "vozila"
+        if len(col_maker) == 0:
+            col_maker = "marka"
+        if len(col_model) == 0:
+            col_model = "model"
+        if len(col_year) == 0:
+            col_year = "godiste"
+        if len(col_engine_kw) == 0:
+            col_engine_kw = "motor_kw"
+        if len(col_owner_id) == 0:
+            col_owner_id = "vlasnik_id"
         
 
-        polja_upita_vozilo = {}
+        query_fields_vehicle = {}
 
-        polja_upita_vozilo['kol_marka'] = {'use': True if len(kol_marka) > 0 else False,
-                                    'name': kol_marka}
-        polja_upita_vozilo['kol_model'] = {'use': True if len(kol_model) > 0 else False,
-                                    'name': kol_model}
-        polja_upita_vozilo['kol_godiste'] = {'use': True if len(kol_godiste) > 0 else False,
-                                    'name': kol_godiste}
+        query_fields_vehicle['col_maker'] = {'use': True if len(col_maker) > 0 else False,
+                                    'name': col_maker}
+        query_fields_vehicle['col_model'] = {'use': True if len(col_model) > 0 else False,
+                                    'name': col_model}
+        query_fields_vehicle['col_year'] = {'use': True if len(col_year) > 0 else False,
+                                    'name': col_year}
 
-        if len(kol_motor_kw) > 0:
-            motor_min = input("Unesite najmanju snagu motora: ").strip()
-            motor_max = input("Unesite najveću snagu motora: ").strip()
+        if len(col_engine_kw) > 0:
+            engine_min = input("Enter the minimum motor power: ").strip()
+            engine_max = input("Enter the maximum motor power: ").strip()
 
-            polja_upita_vozilo['kol_motor_kw'] = {'use': True, 'name': kol_motor_kw, 
-                                            'start': float(motor_min), 'end': float(motor_max)}
+            query_fields_vehicle['col_engine_kw'] = {'use': True, 'name': col_engine_kw, 
+                                                    'start': float(engine_min), 'end': float(engine_max)}
         else:
-            polja_upita_vozilo['kol_motor_kw'] = {'use': False}
+            query_fields_vehicle['col_engine_kw'] = {'use': False}
 
-        # "MMMM DD, YYYY" - željeni format za prikaz u Python-u
-        if len(kol_datum_reg) > 0:
-            datum_min = input("Unesite najmanji datum registracije(YYYY-MM-DD): ").strip()
-            datum_max = input("Unesite najveći datum registracije(YYYY-MM-DD): ").strip()
+        if len(col_reg_date) > 0:
+            date_min = input("Enter the minimum registration date(YYYY-MM-DD): ").strip()
+            date_max = input("Enter the maximum registration date(YYYY-MM-DD): ").strip()
 
-            polja_upita_vozilo['kol_datum_reg'] = {'use': True, 'name': kol_datum_reg, 
-                                        'start': arrow.get(datum_min), 
-                                        'end': arrow.get(datum_max)}
+            query_fields_vehicle['col_reg_date'] = {'use': True, 'name': col_reg_date, 
+                                        'start': arrow.get(date_min), 
+                                        'end': arrow.get(date_max)}
         else:
-            polja_upita_vozilo['kol_datum_reg'] = {'use': False}
+            query_fields_vehicle['col_reg_date'] = {'use': False}
 
-        polja_upita_vozilo['kol_reg_oznaka'] = {'use': True if len(kol_reg_oznaka) > 0 else False,
-                                        'name': kol_reg_oznaka}
+        query_fields_vehicle['col_plt_number'] = {'use': True if len(col_plt_number) > 0 else False,
+                                        'name': col_plt_number}
 
-        polja_upita_vozilo['kol_vlasnik_id'] = {'use': True if len(kol_vlasnik_id) > 0 else False,
-                                        'name': kol_vlasnik_id}
+        query_fields_vehicle['col_owner_id'] = {'use': True if len(col_owner_id) > 0 else False,
+                                        'name': col_owner_id}
 
         # ključevi i nazivi kolona
         sql_kljucevi = []

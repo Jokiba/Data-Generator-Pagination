@@ -123,8 +123,8 @@ if generate_permission == "y":
             # last owner id
             cursor.execute("""SELECT vlasnik_id FROM vlasnik_vozila
                               ORDER BY vlasnik_id DESC LIMIT 1;""")
-            result3 = cursor.fetchone()
-            last_owner_id = result3['vlasnik_id']
+            result2 = cursor.fetchone()
+            last_owner_id = result2['vlasnik_id']
             if last_owner_id:
                 print("Last owner id:", last_owner_id)
             else:
@@ -132,9 +132,9 @@ if generate_permission == "y":
             time.sleep(3)
             # Total number of license plates and list of registration number for vehicles
             cursor.execute("SELECT reg_oznaka FROM vozila;")
-            result4 = cursor.fetchall()
+            result3 = cursor.fetchall()
             registration_number_database = []
-            for reg_number in result4:
+            for reg_number in result3:
                 if reg_number['reg_oznaka'] is not None:
                     registration_number_database.append(reg_number['reg_oznaka'])
             if registration_number_database:
@@ -223,7 +223,10 @@ if generate_permission == "y":
         # SQL query with variables  
         sql_query2 = f"INSERT INTO {table_name2} ({col_fields_str2}) VALUES({sql_keys_str2});"
 
+        # initial foreign key
         owner_id_initial = last_owner_id - num_records_vehicle
+
+        # data object creation
         vehicle_data = []
         for _ in range(num_records_vehicle):
             row = {}
@@ -246,6 +249,7 @@ if generate_permission == "y":
                     date_reg = query_fields_vehicle['col_reg_date']['start'].shift(days= random_day).format("YYYY-MM-DD")
                     row['col_reg_date'] = date_reg
                 elif key == 'col_plt_number':
+                    # plate number creation
                     while True:
                         plt_number = None
                         number = random.randint(1, 99)
@@ -266,25 +270,25 @@ if generate_permission == "y":
                                 reg_oznaka_baza.append(plt_number)
                                 row['col_plt_number'] = plt_number
                                 break
-                elif key == 'kol_vlasnik_id':
-                    vlasnik_id_pocetni += 1
-                    row['kol_vlasnik_id'] = vlasnik_id_pocetni
-            podaci_vozila.append(row)
+                elif key == 'col_owner_id':
+                    owner_id_initial += 1
+                    row['col_owner_id'] = owner_id_initial
+            vehicle_data.append(row)
     try:
         connection = pymysql.connect(**db_credential, cursorclass= pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
-            result2 = cursor.executemany(sql_upit2, podaci_vozila)
+            result4 = cursor.executemany(sql_query2, vehicle_data)
             connection.commit()
-            if result2:
-                print("Uspešno unetih redova:", result2)
+            if result4:
+                print("Successfully inserted rows:", result4)
             else:
-                print("Greška pri unosu redova.")
+                print("Error during row entry.")
             cursor.close()
     except pymysql.MySQLError as ex:
-        print("Greška pri unosu redova!", ex)
+        print("Error during row entry!", ex)
     finally:
         if 'connection' in locals() and connection.open:
             connection.close()
-            print("Konekcija je zatvorena.")
+            print("The connection has been closed.")
 else:
-    print("Generisanje podataka i ubacivanje je otkazano!")
+    print("Generation data and insertion has been cancelled!")
